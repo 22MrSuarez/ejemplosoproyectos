@@ -1,0 +1,48 @@
+#ulizando los 3 ciclos, mostrar al usuario un menu que tiene las opciones
+#1-calcuclar potencia(base, exponente)
+#2-calcular cantidad de numeros pares ingresados
+#3-salir
+
+#Jean Marc Suarez Buitrón
+
+def presentación():
+    print("Bienvenido al programa")
+    print("**************************")
+
+def menu():
+        print("Menu:")
+        print("1-Calcular potencia de un numero")
+        print("2-Contar cantidad de numeros pares ingresados")
+        print("3-Salir\n")
+
+ 
+presentación()
+while True:
+    menu()
+    opcionMenu=int(input("ingrese una opcion: "))
+    
+    if opcionMenu==1:
+        varBase=int(input("Ingrese una base: "))
+        varExponente=int(input("Ingrese un exponente: "))
+        varPotencia=varBase**varExponente
+        print(varBase,"^",varExponente,"=",varPotencia)
+        print("**************************")
+    elif opcionMenu==2:
+        varContador=0
+        opcionNumero="y"
+        while opcionNumero=="y":
+            varNumero=int(input("ingrese un numero entero: "))
+            if (varNumero%2==0):
+                varContador+=1
+            print("escriba \'y\' si desea ingresar otro numero  ")
+            print("de lo contrario ingres cualquier otra tecla:")
+            opcionNumero=input()
+        print("el numero total de pares que usted ingreso fueron: ",varContador)
+        print("**************************")
+    elif opcionMenu==3:
+        print("usted eligio salir, que tenga un buen día")
+        print("**************************")
+        break
+    else:
+    
+        print("opción inexistente,intentelo nuevamente")
